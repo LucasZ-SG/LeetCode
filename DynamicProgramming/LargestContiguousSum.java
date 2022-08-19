@@ -4,7 +4,7 @@ package DynamicProgramming;
 public class LargestContiguousSum {
     public static int largestContiguousSum(int[] array){
         int[] memo = new int[array.length];
-        memo[0] = array[0] > 0? array[0] : 0; 
+        memo[0] = array[0] > 0 ? array[0] : 0; 
         for(int i = 1;i < array.length; i++){
             if(array[i] + memo[i-1] > 0){
                 memo[i] = memo[i - 1] + array[i];
